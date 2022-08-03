@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <script src="calculator.js" defer>
+    <script>
         function add(a, b) {
             return a + b;
         }
@@ -19,6 +19,20 @@
             return a / b;
         }
 
+        function operate (operator, x, y) {
+            switch(operator) {
+                case ('addition'):
+                    return add(x, y);
+                case ('subtraction'):
+                    return subtract(x, y);
+                case ('multiplication'):
+                    return multiply(x, y);
+                case ('division'):
+                    return divide(x, y);
+            }
+        }
+
+        console.log(operate('addition', 5, 33));
     </script>
 </head>
 <body>
