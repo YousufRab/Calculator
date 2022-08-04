@@ -11,6 +11,18 @@ function divide (a, b) {
     return a / b;
 }
 
+function percentage (a) {
+    return a / 100;
+}
+
+function negPos (a) {
+    if (a > 0) {
+        return -Math.abs(a);
+    } else {
+        return Math.abs(a);
+    }
+}
+
 function operate (operator, x, y) {
     switch(operator) {
         case ('addition'):
