@@ -1,9 +1,30 @@
 body {
-    background-color: rgb(14, 170, 0);
+    background-color: rgb(17, 202, 0);
     display: flex;
     justify-content: center;
 }
 
 #container {
-    
+    display: flex;
+    flex-direction: column;
+    border: 4px solid rgb(34, 62, 218);
+    margin-top: 50px;
+}
+
+.btn {
+    height: 45px;
+    width: 45px;
+    border-radius: 2.5px;
+    background-color: rgb(1, 206, 138);
+    color: rgb(110, 61, 0);
+}
+
+#lastLine {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#calculate {
+    align-self: stretch;
 }
