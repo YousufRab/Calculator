@@ -56,8 +56,37 @@ numBtnPressed.forEach((button) => {
         switch(event.target.id) {
             case "one":
                 oneButton();
+                break;
             case "two":
                 twoButton();
+                break;
+            case "three":
+                threeButton();
+                break;
+            case "four":
+                fourButton();
+                break;
+            case "five":
+                fiveButton();
+                break;
+            case "six":
+                sixButton();
+                break;
+            case "seven":
+                sevenButton();
+                break;
+            case "eight":
+                eightButton();
+                break;
+            case "nine":
+                nineButton();
+                break;
+            case "ten":
+                tenButton();
+                break;
+            case "zero":
+                zeroButton();
+                break;
         }
     })
 });
