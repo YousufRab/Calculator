@@ -38,3 +38,7 @@ function operate (operator, x, y) {
             return divide(x, y);
     }
 }
+
+let displayValue = 0;
+
+const buttonPressed = document.querySelectorAll('btn');
