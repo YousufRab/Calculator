@@ -11,3 +11,5 @@ Project was undertaken as part of The Odin Project foundations course.
 
 ## License
 - [MIT License](https://github.com/YousufRab/Calculator/blob/main/LICENSE.md)
+
+**PROJECT IS WORK IN PROGRESS**
