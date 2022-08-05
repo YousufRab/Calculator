@@ -40,19 +40,66 @@ function operate (operator, x, y) {
 }
 
 function oneButton() {
-    document.getElementById('display').innerHTML = "1";
+    displayValue += "1"
+    document.getElementById('display').innerHTML = displayValue;
 }
 
 function twoButton() {
-    document.getElementById('display').innerHTML = "2"
+    displayValue += "2"
+    document.getElementById('display').innerHTML = displayValue;
 }
 
-let displayValue = 0;
+function threeButton() {
+    displayValue += "3"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function fourButton() {
+    displayValue += "4"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function fiveButton() {
+    displayValue += "5"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function sixButton() {
+    displayValue += "6"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function sevenButton() {
+    displayValue += "7"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function eightButton() {
+    displayValue += "8"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function nineButton() {
+    displayValue += "9"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function zeroButton() {
+    displayValue += "0"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function twoButton() {
+    displayValue += "2"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+
+let displayValue = '';
 
 const numBtnPressed = document.querySelectorAll('.calcNum');
 numBtnPressed.forEach((button) => {
     button.addEventListener('click', (event) => {
-        console.log(event.target.id)
         switch(event.target.id) {
             case "one":
                 oneButton();
