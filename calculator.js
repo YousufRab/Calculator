@@ -39,6 +39,24 @@ function operate (operator, x, y) {
     }
 }
 
+function oneButton() {
+    document.getElementById('display').innerHTML = "1";
+}
+
+function twoButton() {
+    document.getElementById('display').innerHTML = "2"
+}
+
 let displayValue = 0;
 
-const buttonPressed = document.querySelectorAll('btn');
+const buttonPressed = document.querySelectorAll('.btn');
+buttonPressed.forEach((button) => {
+    button.addEventListener('click', (event) => {
+        switch(event.target.id) {
+            case "one":
+                oneButton();
+            case "two":
+                twoButton();
+        }
+    })
+});
