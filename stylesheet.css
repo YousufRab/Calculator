@@ -10,6 +10,7 @@ body {
     border: 4px solid rgb(34, 62, 218);
     margin-top: 50px;
     row-gap: 10px;
+    font-family: 'Jua', sans-serif;
 }
 
 .btn {
@@ -18,6 +19,7 @@ body {
     border-radius: 7.5px;
     background-color: rgb(1, 206, 138);
     color: rgb(110, 61, 0);
+    font-family: 'Jua', sans-serif;
 }
 
 #lastLine {
@@ -30,4 +32,5 @@ body {
     align-self: stretch;
     padding: 12px;
     background-color: transparent;
+    font-family: 'Jua', sans-serif;
 }
