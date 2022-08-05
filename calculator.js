@@ -49,9 +49,10 @@ function twoButton() {
 
 let displayValue = 0;
 
-const buttonPressed = document.querySelectorAll('.btn');
-buttonPressed.forEach((button) => {
+const numBtnPressed = document.querySelectorAll('.calcNum');
+numBtnPressed.forEach((button) => {
     button.addEventListener('click', (event) => {
+        console.log(event.target.id)
         switch(event.target.id) {
             case "one":
                 oneButton();
@@ -60,3 +61,6 @@ buttonPressed.forEach((button) => {
         }
     })
 });
+
+
+
