@@ -17,6 +17,7 @@ body {
     height: 45px;
     width: 45px;
     border-radius: 7.5px;
+    border: 1.5px solid rgb(26, 5, 5);
     background-color: rgb(233, 255, 110);
     color: rgb(185, 0, 114);
     font-family: 'Jua', sans-serif;

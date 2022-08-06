@@ -96,6 +96,9 @@ function twoButton() {
 
 
 let displayValue = '';
+let chosenOperation = null;
+
+
 
 const numBtnPressed = document.querySelectorAll('.calcNum');
 numBtnPressed.forEach((button) => {
