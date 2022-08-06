@@ -65,7 +65,14 @@ opBtnPressed.forEach((button) => {
                 document.getElementById('display').innerHTML = displayValue;
                 break;
             case "delete":
-                ;
+                if (displayValue.length == 1){
+                    displayValue = "0";
+                    document.getElementById('display').innerHTML = displayValue
+                } else {
+                    x = displayValue.slice(0, -1);
+                    displayValue = x;
+                    document.getElementById('display').innerHTML = displayValue;
+                }
                 break;
             case "clear":
                 clrButton();
