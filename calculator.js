@@ -1,3 +1,7 @@
+let displayValue = '';
+let tempValue = '';
+let chosenOperation = null;
+
 // Operator button functions
 
 function add(a, b) {
@@ -28,7 +32,7 @@ function negPos (a) {
     }
 }
 
-function operate (operator, x, y) {
+function calculate (operator, x, y) {
     switch(operator) {
         case "addition":
             return add(x, y);
@@ -38,73 +42,11 @@ function operate (operator, x, y) {
             return multiply(x, y);
         case "division":
             return divide(x, y);
-        case "exponentiation"
+        case "exponential":
+            return expButton();
     }
 }
 
-
-// Number button functions 
-
-function oneButton() {
-    displayValue += "1"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-function twoButton() {
-    displayValue += "2"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-function threeButton() {
-    displayValue += "3"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-function fourButton() {
-    displayValue += "4"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-function fiveButton() {
-    displayValue += "5"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-function sixButton() {
-    displayValue += "6"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-function sevenButton() {
-    displayValue += "7"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-function eightButton() {
-    displayValue += "8"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-function nineButton() {
-    displayValue += "9"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-function zeroButton() {
-    displayValue += "0"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-function twoButton() {
-    displayValue += "2"
-    document.getElementById('display').innerHTML = displayValue;
-}
-
-//////////
-
-let displayValue = '';
-let tempValue = '';
-let chosenOperation = null;
 
 const opBtnPressed = document.querySelectorAll('.calcOperator');
 opBtnPressed.forEach((button) => {
@@ -115,9 +57,11 @@ opBtnPressed.forEach((button) => {
                 document.getElementById('display').innerHTML = displayValue;
                 break;
             case "exponential":
-                expoButton();
                 chosenOperation = 'exponential'
-
+                tempValue = displayValue;
+                document.getElementById('topDisplay').innerHTML = tempValue;
+                displayValue = '0';
+                document.getElementById('display').innerHTML = displayValue;
                 break;
             case "delete":
                 delButton();
@@ -144,11 +88,116 @@ opBtnPressed.forEach((button) => {
                 divide();
                 break;
             case "calculate":
-                operate();
+                dispalyValue = calculate(chosenOperation, tempValue, displayValue);
+
                 break;
         }
     })
 })
+
+// Number button functions 
+
+function oneButton() {
+    if (displayValue == "0") {
+        displayValue = '';
+        displayValue += "1";
+    }else {
+        displayValue += "1";
+    }
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function twoButton() {
+    if (displayValue == "0") {
+        displayValue = '';
+        displayValue += "2";
+    }else {
+        displayValue += "2";
+    }
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function threeButton() {
+    if (displayValue == "0") {
+        displayValue = '';
+        displayValue += "3";
+    }else {
+        displayValue += "3";
+    }
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function fourButton() {
+    if (displayValue == "0") {
+        displayValue = '';
+        displayValue += "4";
+    }else {
+        displayValue += "4";
+    }
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function fiveButton() {
+    if (displayValue == "0") {
+        displayValue = '';
+        displayValue += "5";
+    }else {
+        displayValue += "5";
+    }
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function sixButton() {
+    if (displayValue == "0") {
+        displayValue = '';
+        displayValue += "6";
+    }else {
+        displayValue += "6";
+    }
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function sevenButton() {
+    if (displayValue == "0") {
+        displayValue = '';
+        displayValue += "7";
+    }else {
+        displayValue += "7";
+    }
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function eightButton() {
+    if (displayValue == "0") {
+        displayValue = '';
+        displayValue += "8";
+    }else {
+        displayValue += "8";
+    }
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function nineButton() {
+    if (displayValue == "0") {
+        displayValue = '';
+        displayValue += "9";
+    }else {
+        displayValue += "1";
+    }
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function zeroButton() {
+    displayValue += "0"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+function twoButton() {
+    displayValue += "2"
+    document.getElementById('display').innerHTML = displayValue;
+}
+
+//////////
 
 const numBtnPressed = document.querySelectorAll('.calcNum');
 numBtnPressed.forEach((button) => {
