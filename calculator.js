@@ -101,7 +101,12 @@ opBtnPressed.forEach((button) => {
                 document.getElementById('display').innerHTML = displayValue;
                 break;
             case "period":
-                periodButton();
+                if (displayValue.includes(".")) {
+                    displayValue = displayValue;
+                } else {displayValue.toString();
+                    displayValue += "."
+                    document.getElementById('display').innerHTML = displayValue;
+                }
                 break;
             case "negPos":
                 negPos();
