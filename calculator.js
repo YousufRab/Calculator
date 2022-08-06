@@ -1,5 +1,6 @@
 let displayValue = '';
 let tempValue = '';
+let secTempValue = '';
 let chosenOperation = null;
 
 // Operator button functions
@@ -43,7 +44,7 @@ function calculate (operator, x, y) {
         case "division":
             return divide(x, y);
         case "exponential":
-            return expButton();
+            return x ** y;
     }
 }
 
@@ -59,12 +60,12 @@ opBtnPressed.forEach((button) => {
             case "exponential":
                 chosenOperation = 'exponential'
                 tempValue = displayValue;
-                document.getElementById('topDisplay').innerHTML = tempValue;
+                document.getElementById('topDisplay').innerHTML = tempValue + " " + "^";
                 displayValue = '0';
                 document.getElementById('display').innerHTML = displayValue;
                 break;
             case "delete":
-                delButton();
+                ;
                 break;
             case "clear":
                 clrButton();
@@ -88,8 +89,9 @@ opBtnPressed.forEach((button) => {
                 divide();
                 break;
             case "calculate":
-                dispalyValue = calculate(chosenOperation, tempValue, displayValue);
-
+                x = calculate(chosenOperation, tempValue, displayValue);
+                displayValue = x;
+                document.getElementById('display').innerHTML = displayValue;
                 break;
         }
     })
@@ -188,14 +190,14 @@ function nineButton() {
 }
 
 function zeroButton() {
-    displayValue += "0"
+    if (displayValue == "0") {
+        displayValue = "0";
+    }else {
+        displayValue += "0";
+    }
     document.getElementById('display').innerHTML = displayValue;
 }
 
-function twoButton() {
-    displayValue += "2"
-    document.getElementById('display').innerHTML = displayValue;
-}
 
 //////////
 
