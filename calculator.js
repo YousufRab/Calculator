@@ -98,7 +98,43 @@ function twoButton() {
 let displayValue = '';
 let chosenOperation = null;
 
-
+const opBtnPressed = document.querySelectorAll('.calcOperator');
+opBtnPressed.forEach((button) => {
+    button.addEventListener('click', (event) => {
+        switch(event.target.id) {
+            case "percentage":
+                percButton();
+                break;
+            case "exponential":
+                expoButton();
+                break;
+            case "delete":
+                delButton();
+                break;
+            case "clear":
+                clrButton();
+                break;
+            case "addition":
+                add();
+                break;
+            case "subtraction":
+                subtract();
+                break;
+            case "multiplication":
+                multiply();
+                break;
+            case "period":
+                periodButton();
+                break;
+            case "negPos":
+                negPos();
+                break;
+            case "division":
+                divide();
+                break;
+        }
+    })
+})
 
 const numBtnPressed = document.querySelectorAll('.calcNum');
 numBtnPressed.forEach((button) => {
