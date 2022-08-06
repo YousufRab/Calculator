@@ -87,7 +87,11 @@ opBtnPressed.forEach((button) => {
                 document.getElementById('display').innerHTML = displayValue;
                 break;
             case "subtraction":
-                subtract();
+                chosenOperation = 'subtraction';
+                tempValue = displayValue;
+                document.getElementById('topDisplay').innerHTML = tempValue + " " + "-";
+                displayValue = '0';
+                document.getElementById('display').innerHTML = displayValue;
                 break;
             case "multiplication":
                 multiply();
