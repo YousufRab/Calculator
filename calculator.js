@@ -6,19 +6,19 @@ let chosenOperation = null;
 // Operator button functions
 
 function add(a, b) {
-    return a + b;
+    return Number(a) + Number(b);
 }
 
 function subtract (a, b) {
-    return a - b;
+    return Number(a) - Number(b);
 }
 
 function multiply (a, b) {
-    return a * b;
+    return Number(a) * Number(b);
 }
 
 function divide (a, b) {
-    return a / b;
+    return Number(a) / Number(b);
 }
 
 function percButton (a) {
@@ -48,7 +48,6 @@ function calculate (operator, x, y) {
     }
 }
 
-
 const opBtnPressed = document.querySelectorAll('.calcOperator');
 opBtnPressed.forEach((button) => {
     button.addEventListener('click', (event) => {
@@ -58,7 +57,7 @@ opBtnPressed.forEach((button) => {
                 document.getElementById('display').innerHTML = displayValue;
                 break;
             case "exponential":
-                chosenOperation = 'exponential'
+                chosenOperation = 'exponential';
                 tempValue = displayValue;
                 document.getElementById('topDisplay').innerHTML = tempValue + " " + "^";
                 displayValue = '0';
@@ -69,7 +68,7 @@ opBtnPressed.forEach((button) => {
                     displayValue = "0";
                     document.getElementById('display').innerHTML = displayValue
                 } else {
-                    x = displayValue.toString().slice(0, -1);
+                    let x = displayValue.toString().slice(0, -1);
                     displayValue = x;
                     document.getElementById('display').innerHTML = displayValue;
                 }
@@ -81,7 +80,11 @@ opBtnPressed.forEach((button) => {
                 document.getElementById('topDisplay').innerHTML = tempValue;
                 break;
             case "addition":
-                add();
+                chosenOperation = 'addition';
+                tempValue = displayValue;
+                document.getElementById('topDisplay').innerHTML = tempValue + " " + "+";
+                displayValue = '0';
+                document.getElementById('display').innerHTML = displayValue;
                 break;
             case "subtraction":
                 subtract();
@@ -99,7 +102,7 @@ opBtnPressed.forEach((button) => {
                 divide();
                 break;
             case "calculate":
-                x = calculate(chosenOperation, tempValue, displayValue);
+                let x = calculate(chosenOperation, tempValue, displayValue);
                 displayValue = x;
                 document.getElementById('display').innerHTML = displayValue;
                 break;
