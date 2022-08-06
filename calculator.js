@@ -30,14 +30,15 @@ function negPos (a) {
 
 function operate (operator, x, y) {
     switch(operator) {
-        case ('addition'):
+        case "addition":
             return add(x, y);
-        case ('subtraction'):
+        case "subtraction":
             return subtract(x, y);
-        case ('multiplication'):
+        case "multiplication":
             return multiply(x, y);
-        case ('division'):
+        case "division":
             return divide(x, y);
+        case "exponentiation"
     }
 }
 
@@ -102,6 +103,7 @@ function twoButton() {
 //////////
 
 let displayValue = '';
+let tempValue = '';
 let chosenOperation = null;
 
 const opBtnPressed = document.querySelectorAll('.calcOperator');
@@ -109,10 +111,13 @@ opBtnPressed.forEach((button) => {
     button.addEventListener('click', (event) => {
         switch(event.target.id) {
             case "percentage":
-                document.getElementById('display').innerHTML = percButton(Number(displayValue));
+                displayValue = percButton(Number(parseFloat(displayValue)));
+                document.getElementById('display').innerHTML = displayValue;
                 break;
             case "exponential":
                 expoButton();
+                chosenOperation = 'exponential'
+
                 break;
             case "delete":
                 delButton();
