@@ -107,7 +107,11 @@ opBtnPressed.forEach((button) => {
                 negPos();
                 break;
             case "division":
-                divide();
+                chosenOperation = 'division';
+                tempValue = displayValue;
+                document.getElementById('topDisplay').innerHTML = tempValue + " " + "÷";
+                displayValue = '0';
+                document.getElementById('display').innerHTML = displayValue;
                 break;
             case "calculate":
                 let x = calculate(chosenOperation, tempValue, displayValue);
