@@ -1,5 +1,5 @@
 let displayValue = '';
-let tempValue = '';
+let tempValue = ' ';
 let secTempValue = '';
 let chosenOperation = null;
 
@@ -69,13 +69,16 @@ opBtnPressed.forEach((button) => {
                     displayValue = "0";
                     document.getElementById('display').innerHTML = displayValue
                 } else {
-                    x = displayValue.slice(0, -1);
+                    x = displayValue.toString().slice(0, -1);
                     displayValue = x;
                     document.getElementById('display').innerHTML = displayValue;
                 }
                 break;
             case "clear":
-                clrButton();
+                displayValue = "0";
+                tempValue = " "
+                document.getElementById('display').innerHTML = displayValue;
+                document.getElementById('topDisplay').innerHTML = tempValue;
                 break;
             case "addition":
                 add();
