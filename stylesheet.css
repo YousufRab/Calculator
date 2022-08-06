@@ -34,18 +34,22 @@ body {
     padding: 12px;
     background-color: transparent;
     font-family: 'Jua', sans-serif;
+    border: 2px solid rgb(56, 0, 28);
 }
 
 #topDisplay {
-    padding-top: 8px;
+    padding-top: 4px;
     padding-left: 8px;
     padding-right: 8px;
-    padding-bottom: -12px;
+    padding-bottom: 12px;
+    background-color: rgb(255, 251, 1);
+    margin-bottom: -10px;
 }
 
 #display {
-    padding-top: 0px;
+    padding-top: 5px;
     padding-left: 8px;
     padding-right: 8px;
     padding-bottom: 2px;
+    background-color: rgb(255, 251, 1);
 }
