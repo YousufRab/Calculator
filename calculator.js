@@ -1,3 +1,5 @@
+// Operator button functions
+
 function add(a, b) {
     return a + b;
 }
@@ -14,8 +16,8 @@ function divide (a, b) {
     return a / b;
 }
 
-function percentage (a) {
-    return a / 100;
+function percButton (a) {
+    return a/100;   
 }
 
 function negPos (a) {
@@ -38,6 +40,9 @@ function operate (operator, x, y) {
             return divide(x, y);
     }
 }
+
+
+// Number button functions 
 
 function oneButton() {
     displayValue += "1"
@@ -94,6 +99,7 @@ function twoButton() {
     document.getElementById('display').innerHTML = displayValue;
 }
 
+//////////
 
 let displayValue = '';
 let chosenOperation = null;
@@ -103,7 +109,7 @@ opBtnPressed.forEach((button) => {
     button.addEventListener('click', (event) => {
         switch(event.target.id) {
             case "percentage":
-                percButton();
+                document.getElementById('display').innerHTML = percButton(Number(displayValue));
                 break;
             case "exponential":
                 expoButton();
@@ -131,6 +137,9 @@ opBtnPressed.forEach((button) => {
                 break;
             case "division":
                 divide();
+                break;
+            case "calculate":
+                operate();
                 break;
         }
     })
