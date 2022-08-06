@@ -94,7 +94,11 @@ opBtnPressed.forEach((button) => {
                 document.getElementById('display').innerHTML = displayValue;
                 break;
             case "multiplication":
-                multiply();
+                chosenOperation = 'multiplication';
+                tempValue = displayValue;
+                document.getElementById('topDisplay').innerHTML = tempValue + " " + "x";
+                displayValue = '0';
+                document.getElementById('display').innerHTML = displayValue;
                 break;
             case "period":
                 periodButton();
