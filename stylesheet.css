@@ -48,7 +48,7 @@ body {
     padding-bottom: 0px;
     background-color: rgb(255, 251, 1);
     /* margin-bottom: -10px; */
-    font-size: 3.5vw;
+    font-size: 12px;
 }
 
 #display {
@@ -59,7 +59,13 @@ body {
     padding-bottom: 2px;
     background-color: rgb(255, 251, 1);
     text-align: right;
-    font-size: 7vw;
+    font-size: 34px;
+    animation: fadeIn 1.3s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% {opacity: 1;}
 }
 
 #displayContainer {
@@ -68,7 +74,7 @@ body {
     justify-content: flex-end;
     background-color: rgb(255, 251, 1);
     height: 75px;
-    width: 225px;
+    width: 248px;
 }
 
 #firstLine, #secondLine, #thirdLine, #fourthLine, #fifthLine {
