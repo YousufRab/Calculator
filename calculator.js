@@ -214,7 +214,7 @@ function nineButton() {
         displayValue = '';
         displayValue += "9";
     }else {
-        displayValue += "1";
+        displayValue += "9";
     }
     document.getElementById('display').innerHTML = displayValue;
 }
