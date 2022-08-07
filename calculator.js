@@ -3,6 +3,15 @@ let tempValue = ' ';
 let secTempValue = '';
 let chosenOperation = null;
 
+
+function checkDisplaySize () {
+    if (displayValue.length > 11) {
+        document.getElementById('display').style.fontSize = '12px';
+    } else {
+        document.getElementById('display').style.fontSize = '34px';
+    }
+}
+
 // Operator button functions
 
 function add(a, b) {
@@ -77,6 +86,7 @@ opBtnPressed.forEach((button) => {
                 break;
             case "clear":
                 displayValue = "0";
+                document.getElementById('display').style.fontSize = '34px';
                 tempValue = " "
                 document.getElementById('display').innerHTML = displayValue;
                 document.getElementById('topDisplay').innerHTML = tempValue;
@@ -133,6 +143,7 @@ opBtnPressed.forEach((button) => {
 // Number button functions 
 
 function oneButton() {
+    checkDisplaySize ();
     if (displayValue == "0") {
         displayValue = '';
         displayValue += "1";
@@ -143,6 +154,7 @@ function oneButton() {
 }
 
 function twoButton() {
+    checkDisplaySize ();
     if (displayValue == "0") {
         displayValue = '';
         displayValue += "2";
@@ -153,6 +165,7 @@ function twoButton() {
 }
 
 function threeButton() {
+    checkDisplaySize ();
     if (displayValue == "0") {
         displayValue = '';
         displayValue += "3";
@@ -163,6 +176,7 @@ function threeButton() {
 }
 
 function fourButton() {
+    checkDisplaySize ();
     if (displayValue == "0") {
         displayValue = '';
         displayValue += "4";
@@ -173,6 +187,7 @@ function fourButton() {
 }
 
 function fiveButton() {
+    checkDisplaySize ();
     if (displayValue == "0") {
         displayValue = '';
         displayValue += "5";
@@ -183,6 +198,7 @@ function fiveButton() {
 }
 
 function sixButton() {
+    checkDisplaySize ();
     if (displayValue == "0") {
         displayValue = '';
         displayValue += "6";
@@ -193,6 +209,7 @@ function sixButton() {
 }
 
 function sevenButton() {
+    checkDisplaySize ();
     if (displayValue == "0") {
         displayValue = '';
         displayValue += "7";
@@ -203,6 +220,7 @@ function sevenButton() {
 }
 
 function eightButton() {
+    checkDisplaySize ();
     if (displayValue == "0") {
         displayValue = '';
         displayValue += "8";
@@ -213,6 +231,7 @@ function eightButton() {
 }
 
 function nineButton() {
+    checkDisplaySize ();
     if (displayValue == "0") {
         displayValue = '';
         displayValue += "9";
@@ -223,6 +242,7 @@ function nineButton() {
 }
 
 function zeroButton() {
+    checkDisplaySize ();
     if (displayValue == "0") {
         displayValue = "0";
     }else {
