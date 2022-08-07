@@ -109,7 +109,8 @@ opBtnPressed.forEach((button) => {
                 }
                 break;
             case "negPos":
-                negPos();
+                displayValue = negPos(Number(parseFloat(displayValue)));
+                document.getElementById('display').innerHTML = displayValue;
                 break;
             case "division":
                 chosenOperation = 'division';
