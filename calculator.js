@@ -5,7 +5,7 @@ let chosenOperation = null;
 
 
 function checkDisplaySize () {
-    if (displayValue.length > 11) {
+    if (displayValue.toString().length > 11) {
         document.getElementById('display').style.fontSize = '12px';
     } else {
         document.getElementById('display').style.fontSize = '34px';
@@ -66,12 +66,14 @@ opBtnPressed.forEach((button) => {
             case "percentage":
                 displayValue = percButton(Number(parseFloat(displayValue)));
                 document.getElementById('display').innerHTML = displayValue;
+                checkDisplaySize ();
                 break;
             case "exponential":
                 chosenOperation = 'exponential';
                 tempValue = displayValue;
                 document.getElementById('topDisplay').innerHTML = tempValue + " " + "^";
                 displayValue = '0';
+                document.getElementById('display').style.fontSize = '34px';
                 document.getElementById('display').innerHTML = displayValue;
                 break;
             case "delete":
@@ -113,6 +115,7 @@ opBtnPressed.forEach((button) => {
                 document.getElementById('display').innerHTML = displayValue;
                 break;
             case "period":
+                checkDisplaySize ();
                 if (displayValue.includes(".")) {
                     displayValue = displayValue;
                 } else {displayValue.toString();
@@ -134,6 +137,7 @@ opBtnPressed.forEach((button) => {
             case "calculate":
                 let x = calculate(chosenOperation, tempValue, displayValue);
                 displayValue = x;
+                checkDisplaySize ();
                 document.getElementById('display').innerHTML = displayValue;
                 break;
         }
