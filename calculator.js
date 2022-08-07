@@ -45,6 +45,8 @@ function calculate (operator, x, y) {
             return divide(x, y);
         case "exponential":
             return x ** y;
+        case null:
+            return 0;
     }
 }
 
