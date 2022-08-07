@@ -11,6 +11,10 @@ body {
     margin-top: 50px;
     row-gap: 10px;
     font-family: 'Jua', sans-serif;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
 }
 
 .btn {
@@ -44,7 +48,7 @@ body {
     padding-bottom: 0px;
     background-color: rgb(255, 251, 1);
     /* margin-bottom: -10px; */
-    font-size: 12px;
+    font-size: 3.5vw;
 }
 
 #display {
@@ -55,7 +59,7 @@ body {
     padding-bottom: 2px;
     background-color: rgb(255, 251, 1);
     text-align: right;
-    font-size: 20px;
+    font-size: 7vw;
 }
 
 #displayContainer {
@@ -63,6 +67,11 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     background-color: rgb(255, 251, 1);
-    height: 60px;
-    width: 200px;
+    height: 75px;
+    width: 225px;
+}
+
+#firstLine, #secondLine, #thirdLine, #fourthLine, #fifthLine {
+    display: flex;
+    justify-content: space-around;
 }
