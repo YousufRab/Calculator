@@ -156,8 +156,8 @@ opBtnPressed.forEach((button) => {
                 checkDisplaySize ();
                 document.getElementById('display').innerHTML = displayValue;
                 break;
-        }
-        fadeIn();    
+            }
+            fadeIn();    
     }
     )
 }
@@ -174,6 +174,7 @@ function oneButton() {
         displayValue += "1";
     }
     document.getElementById('display').innerHTML = displayValue;
+    fadeIn();
 }
 
 function twoButton() {
@@ -185,6 +186,7 @@ function twoButton() {
         displayValue += "2";
     }
     document.getElementById('display').innerHTML = displayValue;
+    fadeIn();
 }
 
 function threeButton() {
@@ -196,6 +198,7 @@ function threeButton() {
         displayValue += "3";
     }
     document.getElementById('display').innerHTML = displayValue;
+    fadeIn();
 }
 
 function fourButton() {
@@ -207,6 +210,7 @@ function fourButton() {
         displayValue += "4";
     }
     document.getElementById('display').innerHTML = displayValue;
+    fadeIn();
 }
 
 function fiveButton() {
@@ -218,6 +222,7 @@ function fiveButton() {
         displayValue += "5";
     }
     document.getElementById('display').innerHTML = displayValue;
+    fadeIn();
 }
 
 function sixButton() {
@@ -229,6 +234,7 @@ function sixButton() {
         displayValue += "6";
     }
     document.getElementById('display').innerHTML = displayValue;
+    fadeIn();
 }
 
 function sevenButton() {
@@ -240,6 +246,7 @@ function sevenButton() {
         displayValue += "7";
     }
     document.getElementById('display').innerHTML = displayValue;
+    fadeIn();
 }
 
 function eightButton() {
@@ -251,6 +258,7 @@ function eightButton() {
         displayValue += "8";
     }
     document.getElementById('display').innerHTML = displayValue;
+    fadeIn();
 }
 
 function nineButton() {
@@ -262,6 +270,7 @@ function nineButton() {
         displayValue += "9";
     }
     document.getElementById('display').innerHTML = displayValue;
+    fadeIn();
 }
 
 function zeroButton() {
@@ -272,6 +281,7 @@ function zeroButton() {
         displayValue += "0";
     }
     document.getElementById('display').innerHTML = displayValue;
+    fadeIn();
 }
 
 
@@ -318,5 +328,8 @@ numBtnPressed.forEach((button) => {
     })
 });
 
-
+onload = () => {
+    document.getElementById('display').style.opacity = 0;
+    fadeIn();
+}
 
