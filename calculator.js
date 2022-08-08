@@ -12,6 +12,22 @@ function checkDisplaySize () {
     }
 }
 
+// Define a function fadeIn to handle cancelling ongoing animation and beginning next animation
+
+function fadeIn() {
+    for (const animation of document.getAnimations()) {
+        animation.cancel();
+    }
+    document.getElementById('display').animate([{
+        opacity: 0,
+        opacity: 1,
+    }], {
+        duration: 1300,
+        iterations: 1,
+        fill: 'forwards'
+    });
+}
+
 // Operator button functions
 
 function add(a, b) {
