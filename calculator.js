@@ -22,7 +22,7 @@ function fadeIn() {
         opacity: 0,
         opacity: 1,
     }], {
-        duration: 700,
+        duration: 500,
         iterations: 1,
         fill: 'forwards'
     });
