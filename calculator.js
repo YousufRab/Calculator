@@ -1,4 +1,4 @@
-let displayValue = '';
+let displayValue = document.getElementById('display').innerHTML;
 let tempValue = ' ';
 let secTempValue = '';
 let chosenOperation = null;
