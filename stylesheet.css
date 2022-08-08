@@ -30,13 +30,13 @@ body {
     color-stop(#147bb6,0.2),
     color-stop(#00abe5,0.6),color-stop(#02a8e4,1));
     background:-webkit-linear-gradient(top,#7295b5 0%,
-    #005081 20%,#147bb6 50%,#00abe5 94%,#02a8e4 90%);
+    #005081 10%,#147bb6 40%,#00abe5 94%,#02a8e4 90%);
     background:-moz-linear-gradient(top,#7295b5 0%,
-    #005081 20%,#147bb6 50%,#00abe5 94%,#02a8e4 90%);
+    #005081 10%,#147bb6 40%,#00abe5 94%,#02a8e4 90%);
     background:-o-linear-gradient(top,#7295b5 0%,
-    #005081 20%,#147bb6 50%,#00abe5 94%,#02a8e4 90%);
+    #005081 10%,#147bb6 40%,#00abe5 94%,#02a8e4 90%);
     background:linear-gradient(top,#7295b5 0%,
-    #005081 20%,#147bb6 50%,#00abe5 94%,#02a8e4 90%);
+    #005081 10%,#147bb6 40%,#00abe5 94%,#02a8e4 90%);
     color: rgb(255, 255, 255);
     font-family: 'Jua', sans-serif;
     text-align: center;
@@ -56,7 +56,7 @@ body {
 }
 
 .btn:hover {
-	background:#ff2727;
+	background:#9b0ff8;
 }
 
 #lastLine {
@@ -70,7 +70,8 @@ body {
     padding: 12px;
     background-color: transparent;
     font-family: 'Jua', sans-serif;
-    border: 2px solid rgb(56, 0, 28);
+    border: 3x solid rgb(56, 0, 28);
+    border-radius: 4px;
 }
 
 #topDisplay {
