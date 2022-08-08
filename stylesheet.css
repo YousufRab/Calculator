@@ -1,23 +1,60 @@
 body {
-    background-color: rgb(0, 88, 252);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-#container {
+.container {
     display: flex;
     flex-direction: column;
-    border: 6px solid rgb(255, 102, 0);
+    /* border: 6px solid rgb(255, 102, 0); */
     border-radius: 6px;
     margin-top: 50px;
+    margin-bottom: 10px;
     row-gap: 10px;
     font-family: 'Jua', sans-serif;
-    padding-top: 5px;
+    /* padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 5px; */
+    background: linear-gradient(0deg, black, rgb(56, 56, 56));
+    position: relative;
+}
+
+.glow::before , .glow::after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    background: linear-gradient(45deg , #e6fb04, #ff6600, #00ff66, #00ffff,
+    #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff );
+    background-size: 400%; 
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    z-index: -1;
+    animation-name: animate;
+    animation-duration: 20s; 
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;        
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.glow::after{
+    filter: blur(30px);
+    /* opacity: 0.9; */
+
 }
 
 .btn {
@@ -72,6 +109,8 @@ body {
     font-family: 'Jua', sans-serif;
     border: 3x solid rgb(56, 0, 28);
     border-radius: 4px;
+    color: white;
+    margin: 5px;
 }
 
 #topDisplay {
@@ -104,6 +143,7 @@ body {
     border-radius: 6px;
     height: 75px;
     width: 264px;
+    margin: 8px;
    
 }
 
