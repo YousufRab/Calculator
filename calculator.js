@@ -71,7 +71,7 @@ function calculate (operator, x, y) {
         case "exponential":
             return x ** y;
         case null:
-            return 0;
+            return displayValue;
     }
 }
 
