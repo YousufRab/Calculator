@@ -72,6 +72,7 @@ function calculate (operator, x, y) {
             return x ** y;
         case null:
             return displayValue;
+        
     }
 }
 
@@ -152,6 +153,7 @@ opBtnPressed.forEach((button) => {
                 break;
             case "calculate":
                 let x = calculate(chosenOperation, tempValue, displayValue);
+                chosenOperation = null;
                 displayValue = x;
                 checkDisplaySize ();
                 document.getElementById('display').innerHTML = displayValue;
