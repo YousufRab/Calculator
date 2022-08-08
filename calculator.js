@@ -22,7 +22,7 @@ function fadeIn() {
         opacity: 0,
         opacity: 1,
     }], {
-        duration: 1300,
+        duration: 700,
         iterations: 1,
         fill: 'forwards'
     });
@@ -157,8 +157,11 @@ opBtnPressed.forEach((button) => {
                 document.getElementById('display').innerHTML = displayValue;
                 break;
         }
-    })
-})
+        fadeIn();    
+    }
+    )
+}
+)
 
 // Number button functions 
 
