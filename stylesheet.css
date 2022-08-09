@@ -107,7 +107,7 @@ body {
     padding: 12px;
     background-color: transparent;
     font-family: 'Jua', sans-serif;
-    border: 3x solid rgb(56, 0, 28);
+    border: 3px solid #00abe5;
     border-radius: 4px;
     color: white;
     margin: 5px;
