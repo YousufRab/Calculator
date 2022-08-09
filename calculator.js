@@ -16,7 +16,11 @@ function checkDisplaySize () {
 
 function fadeIn() {
     for (const animation of document.getAnimations()) {
-        animation.cancel();
+        if(animation.animationName == 'calcGlow') {
+            continue;
+        } else {
+            animation.cancel();
+        }
     }
     document.getElementById('display').animate([{
         opacity: 0,
