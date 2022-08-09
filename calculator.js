@@ -367,6 +367,32 @@ document.addEventListener('keydown', (event) => {
         case "0":
             zeroButton();
             break;
+        case "Enter":
+            let x = calculate(chosenOperation, tempValue, displayValue);
+            chosenOperation = null;
+            displayValue = x;
+            checkDisplaySize ();
+            document.getElementById('display').innerHTML = displayValue;
+            break;
+        case "Backspace":
+            if (displayValue.length == 1){
+                displayValue = "0";
+                document.getElementById('display').innerHTML = displayValue
+            } else {
+                let x = displayValue.toString().slice(0, -1);
+                displayValue = x;
+                document.getElementById('display').innerHTML = displayValue;
+            }
+            break;
+        case ".":
+            checkDisplaySize ();
+            if (displayValue.includes(".")) {
+                displayValue = displayValue;
+            } else {displayValue.toString();
+                displayValue += "."
+                document.getElementById('display').innerHTML = displayValue;
+            }
+            break;
     }
 } )
 
