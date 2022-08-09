@@ -333,6 +333,44 @@ numBtnPressed.forEach((button) => {
     })
 });
 
+const keyBoardInput = document.getElementById('display');
+
+document.addEventListener('keydown', (event) => {
+    switch(event.key) {
+        case "1":
+            oneButton();
+            break;
+        case "2":
+            twoButton();
+            break;
+        case "3":
+            threeButton();
+            break;
+        case "4":
+            fourButton();
+            break;
+        case "5":
+            fiveButton();
+            break;
+        case "6":
+            sixButton();
+            break;
+        case "7":
+            sevenButton();
+            break;
+        case "8":
+            eightButton();
+            break;
+        case "9":
+            nineButton();
+            break;
+        case "0":
+            zeroButton();
+            break;
+    }
+} )
+
+
 onload = () => {
     document.getElementById('display').style.opacity = 0;
     fadeIn();
