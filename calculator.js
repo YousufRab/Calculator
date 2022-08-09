@@ -93,7 +93,7 @@ opBtnPressed.forEach((button) => {
                 tempValue = displayValue;
                 document.getElementById('topDisplay').innerHTML = tempValue + " " + "^";
                 displayValue = '0';
-                document.getElementById('display').style.fontSize = '34px';
+                document.getElementById('display').style.fontSize = '40px';
                 document.getElementById('display').innerHTML = displayValue;
                 break;
             case "delete":
@@ -108,7 +108,7 @@ opBtnPressed.forEach((button) => {
                 break;
             case "clear":
                 displayValue = "0";
-                document.getElementById('display').style.fontSize = '34px';
+                document.getElementById('display').style.fontSize = '40px';
                 tempValue = " "
                 document.getElementById('display').innerHTML = displayValue;
                 document.getElementById('topDisplay').innerHTML = tempValue;
@@ -421,9 +421,21 @@ document.addEventListener('keydown', (event) => {
             displayValue = '0';
             document.getElementById('display').innerHTML = displayValue;
             break;
-
-
-
+        case "^":
+            chosenOperation = 'exponential';
+            tempValue = displayValue;
+            document.getElementById('topDisplay').innerHTML = tempValue + " " + "^";
+            displayValue = '0';
+            document.getElementById('display').style.fontSize = '40px';
+            document.getElementById('display').innerHTML = displayValue;
+            break;
+        case "Escape":
+            displayValue = "0";
+            document.getElementById('display').style.fontSize = '40px';
+            tempValue = " "
+            document.getElementById('display').innerHTML = displayValue;
+            document.getElementById('topDisplay').innerHTML = tempValue;
+            break;
     }
 } )
 
