@@ -1,8 +1,8 @@
 body {
     background-color: rgb(0, 0, 0);
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -179,10 +179,32 @@ body {
 }
 
 #botLine{
+    display: flex;
+    justify-content: center;
     height: 10px;
     background-color: black;
     width: 100%;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
 }
 
+#gitLogo {
+    height: 12px;
+    width: 12px;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
