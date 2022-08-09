@@ -393,6 +393,37 @@ document.addEventListener('keydown', (event) => {
                 document.getElementById('display').innerHTML = displayValue;
             }
             break;
+        case "+":
+            chosenOperation = 'addition';
+            tempValue = displayValue;
+            document.getElementById('topDisplay').innerHTML = tempValue + " " + "+";
+            displayValue = '0';
+            document.getElementById('display').innerHTML = displayValue;
+            break;
+        case "*":
+            chosenOperation = 'multiplication';
+            tempValue = displayValue;
+            document.getElementById('topDisplay').innerHTML = tempValue + " " + "x";
+            displayValue = '0';
+            document.getElementById('display').innerHTML = displayValue;
+            break;
+        case "-":
+            chosenOperation = 'subtraction';
+            tempValue = displayValue;
+            document.getElementById('topDisplay').innerHTML = tempValue + " " + "-";
+            displayValue = '0';
+            document.getElementById('display').innerHTML = displayValue;
+            break;
+        case "/":
+            chosenOperation = 'division';
+            tempValue = displayValue;
+            document.getElementById('topDisplay').innerHTML = tempValue + " " + "÷";
+            displayValue = '0';
+            document.getElementById('display').innerHTML = displayValue;
+            break;
+
+
+
     }
 } )
 
