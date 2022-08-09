@@ -5,10 +5,10 @@ let chosenOperation = null;
 
 
 function checkDisplaySize () {
-    if (displayValue.toString().length > 11) {
+    if (displayValue.toString().length > 10) {
         document.getElementById('display').style.fontSize = '12px';
     } else {
-        document.getElementById('display').style.fontSize = '34px';
+        document.getElementById('display').style.fontSize = '40px';
     }
 }
 
