@@ -368,6 +368,7 @@ document.addEventListener('keydown', (event) => {
             zeroButton();
             break;
         case "Enter":
+            event.preventDefault();
             let x = calculate(chosenOperation, tempValue, displayValue);
             chosenOperation = null;
             displayValue = x;
